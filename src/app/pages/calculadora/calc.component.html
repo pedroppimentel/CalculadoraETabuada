@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="calculadora">
+
+    <div class=" ipt-group">
+      <input class="ipt-calc" #ipt1 type="number" placeholder="Primeiro" />
+      <select class="op-select" #opValue name="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input class="ipt-calc" #ipt2 type="number" placeholder="Segundo" />
+    </div>
+
+    <div class="result-group">
+      <p class="output-result">{{ result }}</p>
+    </div>
+
+    <button class="calc-btn" (click)="calcular(ipt1.value, ipt2.value, opValue.value)">Calcular</button>
+
+  </div> 
+
+  <a class="go-back" href="/">BACK</a>
+</div>
+
+
